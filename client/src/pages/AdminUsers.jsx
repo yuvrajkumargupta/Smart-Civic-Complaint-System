@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AdminLayout from '../components/AdminLayout';
 import API from '../api/axios';
-import { Users, Mail, Shield, Calendar } from 'lucide-react';
+import { Mail, Shield, Calendar } from 'lucide-react';
 
 const AdminUsers = () => {
     const [users, setUsers] = useState([]);
@@ -55,8 +55,8 @@ const AdminUsers = () => {
                                 </td>
                                 <td className="p-4">
                                     <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium capitalize border ${user.role === 'admin'
-                                            ? 'bg-purple-50 text-purple-600 border-purple-100'
-                                            : 'bg-blue-50 text-blue-600 border-blue-100'
+                                        ? 'bg-purple-50 text-purple-600 border-purple-100'
+                                        : 'bg-blue-50 text-blue-600 border-blue-100'
                                         }`}>
                                         <Shield className="w-3 h-3 mr-1" />
                                         {user.role}

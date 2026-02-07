@@ -12,12 +12,10 @@ import {
     User,
     ThumbsUp,
     Zap,
-    TrendingUp,
     Star
 } from 'lucide-react';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 import API from '../api/axios';
 import Navbar from '../components/Navbar';
 import CommentSection from '../components/CommentSection';
@@ -31,7 +29,9 @@ const ComplaintDetails = () => {
     const [error, setError] = useState(null);
     const [upvotes, setUpvotes] = useState(0);
     const [isUpvoted, setIsUpvoted] = useState(false);
-    const user = JSON.parse(localStorage.getItem('user'));
+
+    // specialized fix: useMemo for user to prevent infinite loop in useEffect
+    const user = React.useMemo(() => JSON.parse(localStorage.getItem('user')), []);
 
     useEffect(() => {
         const fetchComplaint = async () => {
@@ -52,7 +52,7 @@ const ComplaintDetails = () => {
             }
         };
         fetchComplaint();
-    }, [id]);
+    }, [id, user]);
 
     const [feedbackRating, setFeedbackRating] = useState(5);
     const [feedbackComment, setFeedbackComment] = useState("");

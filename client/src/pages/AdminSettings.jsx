@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AdminLayout from '../components/AdminLayout';
 import API from '../api/axios';
-import { Settings, Bell, Globe, Save, Loader2, Megaphone } from 'lucide-react';
+import { Globe, Save, Loader2, Megaphone } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 
 const AdminSettings = () => {
