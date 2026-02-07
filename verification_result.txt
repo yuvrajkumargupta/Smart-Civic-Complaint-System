@@ -1,0 +1,14 @@
+--- Starting Verification on Port 5000 ---
+
+Testing Root Endpoint (GET /)...
+Status: 200
+RESULT: Root endpoint passed
+
+Testing Registration (POST /api/auth/register)...
+User Email: test1769415245124@example.com
+Status: 201
+RESULT: Registration passed
+
+Testing Login (POST /api/auth/login)...
+Status: 200
+RESULT: Login passed
