@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Send, User, MessageSquare, Loader2 } from 'lucide-react';
+import { Send, MessageSquare, Loader2 } from 'lucide-react';
 import API from '../api/axios';
 import { formatDistanceToNow } from 'date-fns';
 
@@ -9,7 +9,7 @@ const CommentSection = ({ complaintId }) => {
     const [loading, setLoading] = useState(true);
     const [submitting, setSubmitting] = useState(false);
 
-    const fetchComments = async () => {
+    const fetchComments = React.useCallback(async () => {
         try {
             const { data } = await API.get(`/comments/${complaintId}`);
             setComments(data.comments);
@@ -18,11 +18,11 @@ const CommentSection = ({ complaintId }) => {
         } finally {
             setLoading(false);
         }
-    };
+    }, [complaintId]);
 
     useEffect(() => {
         fetchComments();
-    }, [complaintId]);
+    }, [fetchComments]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

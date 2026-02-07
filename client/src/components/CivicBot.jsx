@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, Send, Camera, Calendar, CheckCircle, Smartphone } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MessageSquare, X, Send } from 'lucide-react';
 import API from '../api/axios';
-import { useNavigate } from 'react-router-dom';
 
 // --- ROBOT AVATAR COMPONENT ---
 const RobotAvatar = ({ emotion, small }) => {
@@ -74,7 +75,6 @@ const CivicBot = () => {
     ]);
     const [inputValue, setInputValue] = useState("");
     const messagesEndRef = useRef(null);
-    const navigate = useNavigate();
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -173,11 +173,7 @@ const CivicBot = () => {
         { label: "Resolved?", action: "Show my resolved issues" },
     ];
 
-    const runAction = (text) => {
-        setInputValue(text);
-        // Direct trigger would be better but state update is async, so we just set input for now to let user confirm
-        // Or we can refactor handleSend to take an arg.
-    };
+
 
     return (
         <div className="fixed bottom-6 right-6 z-[10001] font-sans">
@@ -229,8 +225,8 @@ const CivicBot = () => {
                                     className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                                 >
                                     <div className={`max-w-[80%] p-3 text-sm rounded-xl ${msg.sender === 'user'
-                                            ? 'bg-brand-indigo text-white rounded-br-none'
-                                            : 'bg-white text-slate-700 shadow-sm border border-slate-100 rounded-bl-none'
+                                        ? 'bg-brand-indigo text-white rounded-br-none'
+                                        : 'bg-white text-slate-700 shadow-sm border border-slate-100 rounded-bl-none'
                                         }`}>
                                         {msg.text}
                                     </div>

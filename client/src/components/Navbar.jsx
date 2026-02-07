@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { LayoutDashboard, ShieldCheck, LogOut, Bell, User, TrendingUp, MapPin } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
