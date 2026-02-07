@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Link } from 'react-router-dom';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import API from '../api/axios';
@@ -18,7 +18,6 @@ L.Icon.Default.mergeOptions({
 });
 
 const LandingPage = () => {
-    const navigate = useNavigate();
     const [stats, setStats] = useState({ total: 0, resolved: 0, rate: 0 });
     const [mapComplaints, setMapComplaints] = useState([]);
     const [recentActivity, setRecentActivity] = useState([]);

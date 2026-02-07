@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import API from '../api/axios';
 import Navbar from '../components/Navbar';
-import { Loader2, MapPin, AlertCircle, CheckCircle, Clock } from 'lucide-react';
+import { Loader2, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Fix Leaflet Icons
