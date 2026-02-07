@@ -45,9 +45,7 @@ const LandingPage = () => {
         fetchData();
     }, []);
 
-    const scrollToMap = () => {
-        document.getElementById('live-map')?.scrollIntoView({ behavior: 'smooth' });
-    };
+
 
     return (
         <div className="font-sans text-slate-900 bg-white">

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import API from '../api/axios';
-import { Bell, CheckCircle, Info, AlertTriangle, Trash2, Check } from 'lucide-react';
+import { Bell, CheckCircle, Info, AlertTriangle, Check } from 'lucide-react';
 import { format } from 'date-fns';
 
 const Notifications = () => {

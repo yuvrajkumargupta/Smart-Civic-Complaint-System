@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import API from '../api/axios';
 import Navbar from '../components/Navbar';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Loader2, TrendingUp, CheckCircle, AlertCircle, Clock } from 'lucide-react';
+import { Loader2, TrendingUp, CheckCircle, Clock } from 'lucide-react';
 
 const Transparency = () => {
     const [stats, setStats] = useState(null);

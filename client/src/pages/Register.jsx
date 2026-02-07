@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import API from "../api/axios";
-import { ShieldCheck, User, Mail, Lock, ArrowRight, Loader2, CheckCircle } from "lucide-react";
+import { ShieldCheck, User, Mail, Lock, ArrowRight, Loader2 } from "lucide-react";
 
 const Register = () => {
   const [name, setName] = useState("");
