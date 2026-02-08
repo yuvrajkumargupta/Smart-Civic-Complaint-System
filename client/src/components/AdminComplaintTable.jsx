@@ -8,7 +8,6 @@ import {
     Clock,
     Search,
     ChevronDown,
-    ArrowUpRight,
     Eye,
     Zap
 } from 'lucide-react';

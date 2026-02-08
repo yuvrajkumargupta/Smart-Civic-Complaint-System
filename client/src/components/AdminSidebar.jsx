@@ -9,7 +9,6 @@ import {
     ShieldCheck,
     Menu,
     X,
-    ChevronRight
 } from 'lucide-react';
 
 const AdminSidebar = () => {
