@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { MessageSquare, X, Send } from 'lucide-react';
 import API from '../api/axios';
 
